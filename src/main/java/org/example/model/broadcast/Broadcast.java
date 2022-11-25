@@ -84,14 +84,14 @@ public class Broadcast {
                 .sum();
     }
 
-    public int calculateIncome() {
+    public double calculateIncome() {
         return broadcast.stream()
-                .mapToInt(BroadcastPart::getIncome)
+                .mapToDouble(BroadcastPart::getIncome)
                 .sum();
     }
 
     public void printBroadcastInfo() {
-        System.out.printf("----------\nBroadcast title: %s. Duration: %.1f minutes (%d seconds). Income: %d$\nHost(-s): ",
+        System.out.printf("----------\nBroadcast title: %s. Duration: %.1f minutes (%d seconds). Income: %.2f$\nHost(-s): ",
                 title, calculateBroadcastDuration() / 60., calculateBroadcastDuration(), calculateIncome());
         hosts.stream().map(Host::getName).forEach(x -> System.out.print(x + ". "));
         System.out.println("\n----------");

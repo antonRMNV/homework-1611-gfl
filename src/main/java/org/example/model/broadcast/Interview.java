@@ -28,8 +28,8 @@ public class Interview implements BroadcastPart {
     }
 
     @Override
-    public int getIncome() {
-        return getDuration() * PRICE_PER_MINUTE / 60;
+    public double getIncome() {
+        return getDuration() * PRICE_PER_MINUTE / 60.;
     }
 
     @Override

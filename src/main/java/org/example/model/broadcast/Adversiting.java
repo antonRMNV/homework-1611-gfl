@@ -28,7 +28,7 @@ public class Adversiting implements BroadcastPart {
         this.duration = duration;
     }
     @Override
-    public int getIncome() {
+    public double getIncome() {
         return getDuration() * PRICE_PER_SECOND;
     }
 

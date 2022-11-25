@@ -37,7 +37,7 @@ public class Song implements BroadcastPart {
     }
 
     @Override
-    public int getIncome() {
+    public double getIncome() {
         return 0;
     }
 
